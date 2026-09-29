@@ -1,0 +1,235 @@
+/* Global Design System & Variables */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ================================================= */
+/* 1. COLOR THEME PALETTES                           */
+/* ================================================= */
+
+/* Light Mode (Default) */
+:root,
+[data-theme="light"] {
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Surfaces & Backgrounds */
+  --bg-page: #f8fafc;
+  --bg-page-gradient: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(241, 245, 249, 0.8) 0px, transparent 100%);
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f8fafc;
+  --bg-card-header: #ffffff;
+  --border-color: #e2e8f0;
+  --border-subtle: #f1f5f9;
+
+  /* Typography */
+  --text-title: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  /* Inputs & Form */
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+  --input-text: #0f172a;
+  --input-focus-bg: #ffffff;
+
+  /* Modals & Dialogs */
+  --modal-bg: #ffffff;
+  --modal-overlay: rgba(15, 23, 42, 0.55);
+
+  /* Table Specifics */
+  --table-head-bg: #f8fafc;
+  --table-hover: #f8fafc;
+  --roll-badge-bg: #f1f5f9;
+  --roll-badge-border: #e2e8f0;
+  --roll-badge-text: #1e293b;
+
+  /* Theme Switcher */
+  --theme-switch-bg: #f1f5f9;
+  --theme-switch-border: #e2e8f0;
+  --theme-btn-color: #64748b;
+  --theme-btn-active-bg: #ffffff;
+  --theme-btn-active-color: #0f172a;
+  --theme-btn-active-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  /* Secondary Button */
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-color: #475569;
+  --btn-secondary-border: #e2e8f0;
+  --btn-secondary-hover: #f8fafc;
+
+  /* Stat Card */
+  --stat-card-bg: #ffffff;
+  --stat-card-border: #e2e8f0;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  /* Surfaces & Backgrounds */
+  --bg-page: #0b0f19;
+  --bg-page-gradient: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.09) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.95) 0px, transparent 100%);
+  --bg-card: #111827;
+  --bg-card-subtle: #1f2937;
+  --bg-card-header: #111827;
+  --border-color: #1f2937;
+  --border-subtle: #1f2937;
+
+  /* Typography */
+  --text-title: #f8fafc;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  /* Inputs & Form */
+  --input-bg: #1f2937;
+  --input-border: #374151;
+  --input-text: #f8fafc;
+  --input-focus-bg: #111827;
+
+  /* Modals & Dialogs */
+  --modal-bg: #111827;
+  --modal-overlay: rgba(0, 0, 0, 0.78);
+
+  /* Table Specifics */
+  --table-head-bg: #161f30;
+  --table-hover: #172033;
+  --roll-badge-bg: #1f2937;
+  --roll-badge-border: #374151;
+  --roll-badge-text: #f1f5f9;
+
+  /* Theme Switcher */
+  --theme-switch-bg: #1e293b;
+  --theme-switch-border: #334155;
+  --theme-btn-color: #94a3b8;
+  --theme-btn-active-bg: #0f172a;
+  --theme-btn-active-color: #f8fafc;
+  --theme-btn-active-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+  /* Secondary Button */
+  --btn-secondary-bg: #1f2937;
+  --btn-secondary-color: #cbd5e1;
+  --btn-secondary-border: #374151;
+  --btn-secondary-hover: #283548;
+
+  /* Stat Card */
+  --stat-card-bg: #111827;
+  --stat-card-border: #1f2937;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.45), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --scrollbar-track: #111827;
+  --scrollbar-thumb: #374151;
+}
+
+/* Warm Light Mode */
+[data-theme="warm"] {
+  /* Surfaces & Backgrounds */
+  --bg-page: #fbf7ee;
+  --bg-page-gradient: 
+    radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(244, 236, 222, 0.85) 0px, transparent 100%);
+  --bg-card: #fffdf7;
+  --bg-card-subtle: #f5ede0;
+  --bg-card-header: #fffdf7;
+  --border-color: #e8decb;
+  --border-subtle: #efe7d7;
+
+  /* Typography */
+  --text-title: #2d241e;
+  --text-body: #4a3b32;
+  --text-muted: #786558;
+  --text-subtle: #a39184;
+
+  /* Inputs & Form */
+  --input-bg: #f7f1e6;
+  --input-border: #d8cbba;
+  --input-text: #2d241e;
+  --input-focus-bg: #ffffff;
+
+  /* Modals & Dialogs */
+  --modal-bg: #fffdf7;
+  --modal-overlay: rgba(45, 36, 30, 0.55);
+
+  /* Table Specifics */
+  --table-head-bg: #f6efe2;
+  --table-hover: #faf3e8;
+  --roll-badge-bg: #f2e9dc;
+  --roll-badge-border: #e2d6c3;
+  --roll-badge-text: #3c2f27;
+
+  /* Theme Switcher */
+  --theme-switch-bg: #f2e9dc;
+  --theme-switch-border: #e2d6c3;
+  --theme-btn-color: #786558;
+  --theme-btn-active-bg: #fffdf7;
+  --theme-btn-active-color: #2d241e;
+  --theme-btn-active-shadow: 0 1px 3px rgba(60, 47, 39, 0.12);
+
+  /* Secondary Button */
+  --btn-secondary-bg: #fffdf7;
+  --btn-secondary-color: #4a3b32;
+  --btn-secondary-border: #e8decb;
+  --btn-secondary-hover: #f7f0e3;
+
+  /* Stat Card */
+  --stat-card-bg: #fffdf7;
+  --stat-card-border: #e8decb;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px -5px rgba(60, 47, 39, 0.06), 0 4px 6px -2px rgba(60, 47, 39, 0.03);
+  --scrollbar-track: #f5ede0;
+  --scrollbar-thumb: #d8cbba;
+}
+
+
+/* ================================================= */
+/* 2. BASE RESETS & GLOBAL STYLING                   */
+/* ================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  background-image: var(--bg-page-gradient);
+  background-attachment: fixed;
+  color: var(--text-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(0.9);
+}

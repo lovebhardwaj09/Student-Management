@@ -1,0 +1,22 @@
+// code explain (app.component.ts)
+*/Code ko CRUD ke 4 blocks ke roop me samjhayen:
+
+Helper Function (createEmptyStudent):
+
+"Maine baar-baar { rno: '', name: '', ... } likhne ke bajaye ek helper method bana diya, taaki jab bhi form reset karna ho ya default value chahiye ho, wahi call ho sake."
+
+Section 1: Read (loadStudents):
+
+"Component load hote hi ngOnInit se loadStudents() trigger hota hai, jo backend se data lake students[] array me store karta hai aur UI table populate hoti hai."
+
+Section 2: Create (addStudent):
+
+"User 'Add' click karta hai toh newStudent blank initialize hota hai aur dialog open hota hai. Submit par API call hoti hai, success aane par dialog close hota hai aur loadStudents() dobara call hokar table refresh karta hai."
+
+Section 3: Update (updateStudent):
+
+"Edit click hone par selectedStudent me row ka data copy hota hai (shallow copy taaki direct table modify na ho). Form edit karke submit karne par update API hit hoti hai aur success ke baad table dobara refresh hoti hai."
+
+Section 4: Delete (deleteStudent):
+
+"Delete click hone par target student ki ID (id, _id ya rno) set hoti hai. Confirmation dialog se jab API hit hoti hai, to backend se record delete hone ke baad table refresh kar di jaati hai."/*

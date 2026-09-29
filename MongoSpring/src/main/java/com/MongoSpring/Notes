@@ -1,0 +1,70 @@
+    flow
+
+      HTTP Request
+                  ↓
+          MainController
+                  ↓
+          StudentService
+                  ↓
+           StudentRepo
+                  ↓
+              MongoDB
+                  ↓
+             Response
+
+
+                             FRONTEND
+             ┌─────────────────────────────┐
+             │ Angular                     │
+             │                             │
+             │ app.component.html          │
+             │          ↑                  │
+             │          │                  │
+             │ app.component.ts            │
+             │          ↑                  │
+             │          │                  │
+             │ StudentService              │
+             │          │                  │
+             │          ↓                  │
+             │ HttpClient                  │
+             └──────────┬──────────────────┘
+                        │
+                        │ GET /fetchStudents
+                        ↓
+                             BACKEND
+             ┌─────────────────────────────┐
+             │ Spring Boot                 │
+             │                             │
+             │ MainController              │
+             │          ↓                  │
+             │ StudentService              │
+             │          ↓                  │
+             │ StudentRepo                 │
+             └──────────┬──────────────────┘
+                        │
+                        ↓
+                           DATABASE
+             ┌─────────────────────────────┐
+             │ MongoDB                     │
+             │                             │
+             │ students collection         │
+             └─────────────────────────────
+
+             Connection step backend to frontend ┘
+
+             ✅ Spring Boot API already ready
+             Angular project create
+             HttpClient setup(app.config.ts)
+             Angular Model(create a folder inside a src and inside model cretea file like student.ts and inside this define fields like spring mode class)
+             Angular Service  (pring Boot API se communication karegi.  same create a folder inside a scr name servce and create a file student service.ts )
+             GET API integration(app.component.ts)
+             MongoDB data Angular UI me show
+             POST + Angular form
+             PUT + Edit form
+             DELETE + delete button
+             PATCH
+             Error handling
+             Loading spinner
+             Environment/API URL
+             Interceptor
+             Authentication/JWT
